@@ -1,0 +1,16 @@
+id,inc,date,title,inst,cash,descr,url
+UT-SLA,1,2023,Student Leadership Award,University of Toronto,NA,"Outstanding student leadership, service, & commitment to the university",https://alumni.utoronto.ca/events-and-programs/awards/utsla
+UT-conf,0,2022,SGS Conference Grant,University of Toronto,1340,NA,https://www.sgs.utoronto.ca/awards/sgs-conference-grant
+LKS-excel,1,2022,Li Ka Shing Excellence Award,Unity Health Toronto,500,Embodies the values & advances the mission of UHT through research & leadership,https://unityhealth.to/2022/12/research-month-awards
+IMS-open,1,2022,Open Fellowship Award,"Institute of Medical Science, University of Toronto",5000,Academic excellence & progress towards degree completion,https://ims.utoronto.ca/
+SMDM-pauker,1,2022,Stephen Pauker Lusted Award,SMDM 44th North American Meeting,250,Outstanding presentation in quantitative methods & theoretical developments,https://smdm.org/hub/page/early-career-awards/about
+IMS-enter,1,2019,Entrance Award,"Institute of Medical Science, University of Toronto",5000,NA,https://ims.utoronto.ca/awards
+UG-TAY,1,2017,Engineering Teaching Assistant of the Year,University of Guelph,NA,NA,https://www.guelphengsoc.com/
+UG-GDS,1,"2015, 2016",Graduate Dean's Scholarship,"College of Phys & Eng Science, University of Guelph",1125,Outstanding academic & research performance,https://www.uoguelph.ca/registrar/calendars/graduate/2015-2016/gradawards/gradawards-cpes.shtml
+UG-PHY,1,"2015, 2016",Engineering Peer Helper of the Year,University of Guelph,NA,NA,https://www.uoguelph.ca/engineering/content/current/peer-helper
+UG-ebmac,1,2015,E.B. MacNaughton Convocation Prize,University of Guelph,NA,College nominee for the W.C. Winegard Medal: top overall convocation award,https://www.uoguelph.ca/registrar/calendars/undergraduate/2014-2015/c09/sec_d0e35444.shtml
+UG-design,1,2015,Helen Grace Tucker Design Prize,University of Guelph,500,"Best performance in engineering design courses, years 2--4",https://www.uoguelph.ca/registrar/calendars/undergraduate/2014-2015/c09/sec_d0e35444.shtml
+UG-PEO,1,2015,Association of the Professional Engineers Medal,University of Guelph,NA,Highest average all coursework in graduating year,https://www.uoguelph.ca/registrar/calendars/undergraduate/2014-2015/c09/sec_d0e35444.shtml
+UG-SOE,1,2015,Society of Excellence,"College of Phys & Eng Science, University of Guelph",NA,Academic achievement & contributions to the U of G community,https://www.physics.uoguelph.ca/news/343
+UG-UGS,1,"2013, 2014",Dean's Scholarship,University of Guelph,1000,NA,https://www.uoguelph.ca/registrar/calendars/undergraduate/2013-2014/c09/sec_d0e33297.shtml
+UG-enter,1,2011,Entrance Scholarship,University of Guelph,2000,NA,https://www.uoguelph.ca/registrar/calendars/undergraduate/2013-2014/c09/sec_d0e32171.shtml
