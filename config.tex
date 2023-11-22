@@ -1,0 +1,83 @@
+\documentclass[
+  margin=25mm,
+  itemsep=.8ex,
+  datewid=3.75em,
+  dategap=.8em,
+]{nacv}
+\usepackage{xcolor}
+\definecolor{main}{HTML}{990033}
+% name + contact info
+\name{Jesse}{Knight}
+\title{%
+  Research Data Scientist, Mishra Lab\par
+  MAP Centre for Urban Health Solutions, Unity Health Toronto}
+\contact{calendar}{2023.11}
+\contact[mailto:]{envelope}{jesse.x.knight@protonmail.com}
+\contact[tel:]{phone}{226.821.2066}
+\contact[https://github.com/]{github}{jessexknight}
+% \contact[https://twitter.com/]{twitter}{jessexknight}
+% fonts 
+\usepackage[sfdefault,tabular,osf]{gandhi}
+\usepackage{mathastext}
+\usepackage[scale=.8]{FiraMono}
+\usepackage[letterspace=150]{microtype}
+% style
+\frenchspacing
+\usepackage{titlesec,setspace}
+\titleformat*{\section}{\Large\lsstyle}
+\titleformat*{\subsection}{\normalsize\scshape\bfseries\lsstyle\MakeLowercase}
+\titleformat*{\subsubsection}{\normalsize\scshape\lsstyle\MakeLowercase}
+\titlespacing*{\section}{0pt}{2ex}{1ex}
+\titlespacing*{\subsection}{0pt}{2ex}{1ex}
+\newcommand{\sicon}[1]{}%{\faIcon{#1}~}
+% dated items
+\newcommand{\itpar}[1]{\ifempty{#1}{}{\par\textit{#1}}}
+\newcommand{\cash}[1]{\hfill\normalfont\$#1}
+\newcommand{\posfmt}[2]{\ifempty{#1}{#2}{\textbf{#1}\ifempty{#2}{}{, #2}}}
+\newcommand{\position}[4][]{\dated[1ex]{#1}{#2}{\posfmt{#3}{#4}}}
+\newcommand{\course}[2]{\dated{}{}{\textit{#1}: #2}}
+\newcommand{\review}[5]{\dated{#1}{#2}{(#3)\enspace\href{#5}{#4}}}
+\newcommand{\media}[5]{\dated{}{#1}{\href{#4}{#2}\ifempty{#3}{}{, #3}\itpar{#5}}}
+\newcommand{\award}[6]{\dated{}{#1}{\href{#6}{#2}, #3\ifempty{#4}{}{\cash{#4}}\itpar{#5}}}
+\newcommand{\fund}[9]{\dated{#1}{#2}{\posfmt{#3}{\href{#8}{#7}\ifempty{#5}{}{(#5)}\cash{#4}\par{#6}\itpar{#9}}}}
+% shorthands
+\usepackage{xspace}
+\newcommand{\covid}{\textsc{covid-19}\xspace}
+\newcommand{\matlab}{\textsc{matlab}\xspace}
+\newcommand{\nref}[2]{\href{#1}{\mdseries#2}}
+\newcommand{\gobblehttps}[8]{}
+% bib
+\addbibresource{data/tex/pubs.bib}\nocite{*}
+\ExecuteBibliographyOptions{minbibnames=3,maxbibnames=9}
+\AtEveryBibitem{\clearfield{note}\clearfield{addendum}}
+\DeclareBibliographyAlias{unpublished}{article}
+\DeclareFieldFormat*{url}{\def\tmp{\gobblehttps#1}\href{#1}{\nolinkurl{\tmp}}}
+\renewbibmacro{in:}{}
+% \PassOptionsToPackage{hyphens}{url}
+\usepackage[
+  colorlinks,
+  urlcolor=main,
+  linkcolor=main,
+]{hyperref}
+% cover
+\newcommand{\addcover}[1]{{
+  \newgeometry{left=4cm,right=4cm}%
+  \setlength\parskip{1ex}%
+  \setstretch{1.15}%
+  \input{#1}
+  \clearpage}
+  \restoregeometry
+  \setcounter{page}{1}}
+\renewcommand{\paragraph}[1]{\par\textbf{#1.}\ \ignorespaces}
+\newcommand{\regarding}[1]{\subsection{\textls[75]{Re: #1}}}
+\newcommand{\address}[2]{\par\contactstyle%
+  #1\par\addvspace{\medskipamount}
+  #2\par\addvspace{\bigskipamount}}
+\usepackage{graphicx}
+\makeatletter
+\newcommand{\signed}[2][]{\par%
+  \addvspace{\bigskipamount}
+  #2\par\addvspace{\medskipamount}
+  \ifempty{#1}{}{\includegraphics[width=4cm]{#1}}
+  \\\nacv@name@given\ \nacv@name@family}
+\makeatother
