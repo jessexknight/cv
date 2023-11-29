@@ -41,7 +41,7 @@ def stex(s):
   return s.replace('&','\&').replace(' - ',' -- ')
 
 def nbib(s):
-  return s.replace('; ',', and ')
+  return s.replace('; ',' and ')
 
 def ntex(s):
   return ', '.join(' '.join(name.split(', ')[::-1]) for name in s.split('; '))

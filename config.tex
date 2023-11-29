@@ -39,7 +39,7 @@
 \newcommand{\review}[5]{\dated{#1}{#2}{(#3)\enspace\href{#5}{#4}}}
 \newcommand{\media}[5]{\dated{}{#1}{\href{#4}{#2}\ifempty{#3}{}{, #3}\itpar{#5}}}
 \newcommand{\award}[6]{\dated{}{#1}{\href{#6}{#2}, #3\ifempty{#4}{}{\cash{#4}}\itpar{#5}}}
-\newcommand{\fund}[9]{\dated{#1}{#2}{\posfmt{#3}{\href{#8}{#7}\ifempty{#5}{}{(#5)}\cash{#4}\par{#6}\itpar{#9}}}}
+\newcommand{\fund}[9]{\dated{#1}{#2}{\posfmt{#3}{\href{#8}{#7}\ifempty{#5}{}{ (#5)}\cash{#4}\par{#6}\itpar{#9}}}}
 % shorthands
 \usepackage{xspace}
 \newcommand{\covid}{\textsc{covid-19}\xspace}
