@@ -58,7 +58,7 @@ def x2fund(X,T):
   X['fundlong'] = stex(X['fundlong'])
   X['calllong'] = stex(X['calllong'])
   X['extra']  = 'NPI: '+ntex(X['npi'])+' ' if X['npi'] != me else ''
-  X['extra'] += '(submitted)' if X['status'] == 'submitted' else ''
+  X['extra'] += '('+X['status']+')' if X['status'] not in ['in progress','complete'] else ''
   X['datefr'] = datex(X['yrfr'],X['mofr'])
   X['dateto'] = datex(X['yrto'],X['moto'])
   X['role']   = '' if X['ftype'] != 'grant' else \
