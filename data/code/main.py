@@ -49,7 +49,7 @@ def x2pub(X,T):
 # funds
 
 me    = 'Knight, Jesse'
-ssmap = dict(grant='Grants',fellow='Fellowships',schol='Scholarships')
+ssmap = dict(grant='Grants',schol='Fellowships \& Scholarships')
 
 def x2fund(X,T):
   log(X['id'],2)
@@ -57,8 +57,8 @@ def x2fund(X,T):
   X['title']    = stex(X['title'])
   X['fundlong'] = stex(X['fundlong'])
   X['calllong'] = stex(X['calllong'])
-  X['extra']  = 'NPI: '+ntex(X['npi'])+' ' if X['npi'] != me else ''
-  X['extra'] += '('+X['status']+')' if X['status'] not in ['in progress','complete'] else ''
+  X['detail']  = 'NPI: '+ntex(X['npi'])+' ' if X['npi'] != me else ''
+  X['detail'] += '('+X['status']+')' if X['status'] not in ['in progress','complete'] else ''
   X['datefr'] = datex(X['yrfr'],X['mofr'])
   X['dateto'] = datex(X['yrto'],X['moto'])
   X['role']   = '' if X['ftype'] != 'grant' else \
@@ -90,7 +90,6 @@ Xs = dict(
 Ts = dict(
   pub = loadtxt(datapath('tps','pub.bib')),
   grant = loadtxt(datapath('tps','grant.tex')),
-  fellow = loadtxt(datapath('tps','fellow.tex')),
   schol = loadtxt(datapath('tps','schol.tex')),
   award = loadtxt(datapath('tps','award.tex')),
   subsec = loadtxt(datapath('tps','subsec.tex')))

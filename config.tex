@@ -41,8 +41,8 @@
 \newcommand{\media}[5]{\dated{}{#1}{\href{#4}{#2}\ifempty{#3}{}{, #3}\itpar{#5}}}
 \newcommand{\award}[6]{\dated{}{#1}{\href{#6}{#2}, #3\ifempty{#4}{}{\cash{#4}}\itpar{#5}}}
 \newcommand{\grant}[9]{\dated{#1}{#2}{\posfmt{#4}{#5}\cash{#3}\par\href{#8}{#7}\par{#6}\itpar{#9}}}
-\newcommand{\schol}[8]{\dated{#1}{#2}{\href{#7}{#6}\ifempty{#5}{}{, #5}\cash{#3}\par{#4}\itpar{#8}}}
-\let\fellow\schol
+\newcommand{\schol}[9]{\dated{#1}{#2}{\href{#7}{#6}\ifempty{#5}{}{, #5}\cash{#3}\par{#4}\itpar{#8}}
+  \ifempty{#9}{}{\bullet#9}}
 % shorthands
 \usepackage{xspace}
 \newcommand{\covid}{covid-19\xspace}
