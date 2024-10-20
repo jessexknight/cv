@@ -3,6 +3,7 @@
   itemsep=.8ex,
   datewid=3.75em,
   dategap=.8em,
+  bibstyle=numeric-comp,
 ]{nacv}
 \usepackage{xcolor}
 \definecolor{main}{HTML}{990033}
@@ -16,8 +17,7 @@
 \contact[mailto:]{envelope}{jesse.x.knight@protonmail.com}
 \contact[tel:]{phone}{226.821.2066}
 \contact[https://github.com/]{github}{jessexknight}
-% \contact[https://twitter.com/]{twitter}{jessexknight}
-% fonts 
+% fonts
 \usepackage[sfdefault,tabular,osf]{gandhi}
 \usepackage{mathastext}
 \usepackage[scale=.8]{FiraMono}
@@ -50,8 +50,7 @@
 \newcommand{\nref}[2]{\href{#1}{\mdseries#2}}
 \newcommand{\gobblehttps}[8]{}
 % bib
-\addbibresource{data/tex/pubs.bib}\nocite{*}
-\ExecuteBibliographyOptions{minbibnames=3,maxbibnames=9}
+\ExecuteBibliographyOptions{minbibnames=4,maxbibnames=9}
 \AtEveryBibitem{\clearfield{note}\clearfield{addendum}}
 \DeclareBibliographyAlias{unpublished}{article}
 \DeclareFieldFormat*{url}{\def\tmp{\gobblehttps#1}\href{#1}{\nolinkurl{\tmp}}}
@@ -61,14 +60,15 @@
   colorlinks,
   urlcolor=main,
   linkcolor=main,
+  citecolor=main,
 ]{hyperref}
 % cover
-\newcommand{\addcover}[1]{{
-  \newgeometry{left=4cm,right=4cm}%
+\newcommand{\addcover}[2][left=4cm,right=4cm]{{
+  \newgeometry{#1}%
   \setlength\parskip{1ex}%
   \setstretch{1.15}%
   \setcounter{page}{1}%
-  \input{#1}
+  \input{#2}
   \clearpage}
   \restoregeometry
   \setcounter{page}{1}}
