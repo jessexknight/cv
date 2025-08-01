@@ -35,7 +35,7 @@ def x2pub(X,T):
   # status
   X['sort'] = ''
   done = X['status'] in ['published','accepted','in press']
-  if not done:
+  if X['status'] != 'published':
     X['sort'] = X['year']
     X['year'] = X['status']
   # keywords
