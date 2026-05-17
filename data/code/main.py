@@ -4,7 +4,7 @@ from utils import *
 # pubs
 
 ptmap = dict(
-  oral='Oral',post='Poster',comp='Competitor',
+  invt='Invited Talk',oral='Oral',post='Poster',comp='Competitor',
   semi='Seminar',glec='Guest Lecture',prop='Proposal',emtg='Meeting',
 )
 
